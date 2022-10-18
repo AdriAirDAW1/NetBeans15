@@ -9,9 +9,9 @@ public class App {
 
     public static void main(String[] args) {
 
-        String pass = "0000", passInput = "";
-        int menu = 0;
-        boolean exit = false;
+        String pass = "0000", passInput;
+        int menu;
+        boolean exit;
         Scanner myScanner = new Scanner(System.in);
 
         do {
@@ -27,9 +27,8 @@ public class App {
 
                     System.out.println("Introduzca la contraseña anterior (4 caracteres): ");
                     passInput = myScanner.nextLine();
-                    myScanner.nextLine();
 
-
+                    if (pass.equals(passInput)) {
                         System.out.println("Contraseña correcta.");
                         do {
                             System.out.println("Introduzca una nueva contraseña (4 caracteres): ");
@@ -39,20 +38,18 @@ public class App {
                             } else {
                                 System.out.println("Debe ser de 4 caracteres!!");
                             }
-                        } while (passInput.length() == 4);
-
+                        } while (passInput.length() != 4);
                     } else {
-
                         System.out.println("ERROR: Contraseña incorrecta...");
-
                     }
+
                     exit = false;
                     break;
                 case 2:
                     System.out.println("Introduce la contraseña (4 caracteres): ");
                     passInput = myScanner.nextLine();
                     myScanner.reset();
-                    if (pass == passInput) {
+                    if (pass.equals(passInput)) {
 
                         System.out.println("Caja fuerte abierta!");
 
