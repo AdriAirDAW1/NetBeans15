@@ -9,17 +9,15 @@ public class App {
 
     public static void main(String[] args) {
 
-        int numero = 0;
-        int[] multiplos = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        int numero;
         Scanner myScanner = new Scanner(System.in);
 
         System.out.println("Introduce un número: ");
         numero = myScanner.nextInt();
 
-        for (int i = 0; i <= 9; i++) {
+        for (int i = 1; i <= 10; i++) {
             
-            multiplos[i] = numero * (i + 1);
-            System.out.print(multiplos[i] + ", ");
+            System.out.println(numero * i);
             
         }
     }
