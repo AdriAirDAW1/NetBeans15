@@ -12,6 +12,7 @@ public class App {
         CajaFuerte miCaja = new CajaFuerte();
         String passInput;
         String passInput2;
+        
         int menu;
         boolean exit;
         Scanner myScanner = new Scanner(System.in);
@@ -23,7 +24,7 @@ public class App {
             System.out.println("\n\t0. Salir\n\t");
             menu = myScanner.nextInt();
             myScanner.nextLine();
-
+                        
             switch (menu) {
                 case 1:
 
@@ -34,7 +35,7 @@ public class App {
                     if (miCaja.changePassword(passInput, passInput2)) {
                         System.out.println("Contraseña cambiada correctamente");
                     } else {
-                        System.out.println("ERROR: Contraseña incorrecta O invalida");
+                        System.out.println("ERROR: Contraseña incorrecta o invalida");
                     }
 
                     exit = false;
